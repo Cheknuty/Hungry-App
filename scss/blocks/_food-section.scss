@@ -1,0 +1,36 @@
+.food-section {
+    padding: 107px 0 96px 0;
+    background-color: $color-button-blue;
+    text-align: center;
+}
+
+.food-section__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.food-section__title {
+    @include font-style($font-family-lato700, 38px, 46px, #FFF){
+        margin: 0;
+    };
+}
+
+.food-section__button {
+    margin-right: 85px;
+}
+
+/* ----RESPONSIVE---- */
+@include max(700px){
+    .food-section__container {
+        flex-direction: column;
+    }
+
+    .food-section__title {
+        margin-bottom: 25px;
+    }
+
+    .food-section__button {
+        margin-right: 0;
+    }
+}

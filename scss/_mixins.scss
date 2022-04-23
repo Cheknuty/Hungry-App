@@ -1,0 +1,25 @@
+@mixin list-unstyled {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+@mixin font-style($font-family: 'Lato400', $font-size: 16px, $line-height: 1.5, $color: #03101A) {
+    font-family: $font-family;
+    font-size: $font-size;
+    line-height: $line-height;
+    color: $color;
+    @content;
+}
+
+@mixin max($max-width) {
+    @media only screen and (max-width: $max-width) {
+        @content;
+    }
+}
+
+@mixin min($min-width) {
+    @media only screen and (min-width: $min-width) {
+        @content;
+    }
+}

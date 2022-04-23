@@ -1,0 +1,89 @@
+.hero-section {
+    padding-bottom: 103px;
+    background-color: $color-button-blue;
+    background-image: url(../../img/main/decoreup.svg), url(../../img/main/descoredown.svg);
+    background-repeat: no-repeat;
+    background-position-x: calc(50% + 520px), calc(50% + 80px);
+    background-position-y: 0, 550px;
+    text-align: left;
+}
+
+.hero-section__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-section__box {
+    max-width: 500px;
+}
+
+.hero-section__title {
+    @include font-style('Work Sans700', 51px, 66px, #FFF){
+        margin-top: 0;
+        margin-bottom: 30px;
+    };
+}
+
+.hero-section__subtitle {
+    @include font-style($font-family-lato400, 20px, $line-height, #FFF){
+        margin-top: 0;
+        margin-bottom: 50px;
+    };
+}
+
+.hero-section__adverb {
+    display: flex;
+    align-items: center;
+}
+
+.hero-section__button-link:first-child {
+    margin-right: 10px;
+}
+
+.hero-section__img {
+    margin-right: 59px;
+}
+
+/* ----RESPOSIVE---- */
+@include max(1160px) {
+    .hero-section {
+        background-image: none
+    }
+
+    .hero-section__img {
+        margin-right: 0;
+    }
+};
+
+@include max(900px) {
+    .hero-section {
+        text-align: center;
+    }
+
+    .hero-section__container {
+        flex-direction: column;
+    }
+
+    .hero-section__box {
+        max-width: 700px;
+        margin-bottom: 40px;
+    }
+
+    .hero-section__adverb {
+        justify-content: center;
+    }
+}
+
+@include max(468px) {
+    .hero-section__title {
+        @include font-style('Work Sans700', 40px, 46px, #FFF){
+            margin-top: 0;
+            margin-bottom: 30px;
+        };
+    }
+
+    .hero-section__img {
+        width: 300px;
+    }
+}

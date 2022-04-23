@@ -1,0 +1,184 @@
+.about-company-section {
+    padding: 63px 0 79px 0;
+    background-image: url(../../img/main/maskup.svg), url(../../img/main/maskdown.svg);
+    background-repeat: no-repeat;
+    background-position-x: calc(50% - 550px), calc(50% - 420px);
+    background-position-y: 230px, 610px;
+}
+
+.about-company-section__box1 {
+    text-align: left;
+    padding-bottom: 112px;
+}
+
+.about-company-section__box1-desc {
+    @include font-style($font-family-lato500, 21px, 26px, $color-dark-rift) {
+        margin-top: 0;
+        margin-bottom: 45px;
+    }
+}
+
+.about-company-section__box1-list {
+    @include list-unstyled;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: -25px;
+}
+
+.about-company-section__box1-item {
+    margin-bottom: 25px;
+}
+
+.about-company-section__box2 {
+    padding-bottom: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.about-company-section__box2-img {
+    display: block;
+    border: 16px solid #FFF;
+    border-bottom: 19px solid #FFF;
+    border-radius: 50px;
+    box-shadow: 3px 2px 18px -7px rgba(0, 0, 0, 0.2);
+}
+
+.about-company-section__box2-title {
+    @include font-style($font-family-lato700, 38px, 46px, $color-dark-rift) {
+        margin-top: 0;
+        margin-bottom: 84px;
+    };
+}
+
+.about-company-section__box2-list {
+    @include list-unstyled;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    margin-bottom: -51px;
+}
+
+.about-company-section__box2-item {
+    margin-bottom: 51px;
+    display: flex;
+    align-items: center;
+    &::before {
+        content: "";
+        display: inline-block;
+        width: 92px;
+        height: 92px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position-y: 6px, 0;
+        margin-right: 31px;
+        flex-shrink: 0;
+    }
+    &:nth-child(1)::before {
+        background-image: url(../../img/main/img1.svg), url(../../img/main/img-bg.svg);
+    }
+    &:nth-child(2)::before {
+        background-image: url(../../img/main/img2.svg), url(../../img/main/img-bg.svg);
+    }
+    &:nth-child(3)::before {
+        background-image: url(../../img/main/img3.svg), url(../../img/main/img-bg.svg);
+    }
+}
+
+.about-company-section__box2-item-wrapper {
+    max-width: 446px;
+}
+
+.about-company-section__box2-item-title {
+    @include font-style($font-family-lato500, 21px, 25px, $color-dark-rift) {
+    margin-top: 0;
+    margin-bottom: 20px;
+    }
+}
+
+.about-company-section__box2-item-subtitle {
+    margin: 0;
+}
+
+.about-company-section__box3 {
+    text-align: center;
+}
+
+.about-company-section__box3-title {
+    @include font-style($font-family-lato700, 38px, 46px, $color-dark-rift){
+        margin-top: 0;
+        margin-bottom: 80px;
+    }
+}
+
+.about-company-section__box3-list {
+    @include list-unstyled;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: -25px;
+}
+
+.about-company-section__box3-item {
+    margin-bottom: 25px;
+    max-width: 280px;
+}
+
+.about-company-section__box3-item-avatar {
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.about-company-section__box3-item-title {
+    @include font-style($font-family-lato500, 21px, 25px, $color-dark-rift){
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+}
+
+.about-company-section__box3-item-subtitle {
+    margin: 0;
+}
+
+/* ----RESPOSIVE---- */
+@include max(1000px) {
+    .about-company-section {
+        background-image: none;
+    }
+
+}
+
+@include max(900px) {
+    .about-company-section__box1 {
+        text-align: center;
+    }
+
+    .about-company-section__box1-list {
+        flex-wrap: wrap;
+    }
+
+    .about-company-section__box1-item {
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 5px;
+    }
+
+    .about-company-section__box2 {
+        text-align: center;
+        flex-direction: column-reverse;
+    }
+
+    .about-company-section__box2-list {
+        margin-bottom: -15px;
+    }
+
+    .about-company-section__box3-list {
+        flex-direction: column;
+    }
+
+    .about-company-section__box3-item {
+        max-width: 480px;
+    }
+}
